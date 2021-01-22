@@ -1,0 +1,14 @@
+.Button
+{
+    display: flex;
+    margin-top: 20px;
+    margin-right: 20px;
+    justify-content: flex-end;
+}
+.Form_Button
+{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    margin-top: 20px;
+}

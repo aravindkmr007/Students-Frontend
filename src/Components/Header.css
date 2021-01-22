@@ -1,0 +1,19 @@
+.Header {
+    display: flex;
+    background-color: #3d4977;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 10px 10px 10px 10px rgba(0,0, 0, 0.3);
+
+}
+.Header_left
+{
+    display: flex;
+    align-items: center;
+}
+.Header_right
+{
+    display: flex;
+    align-items: center;
+}

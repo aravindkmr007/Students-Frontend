@@ -1,0 +1,49 @@
+.Form 
+{
+    position: absolute;
+    box-sizing: border-box;
+    top:0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 100000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.3);
+}
+.FormBox
+{
+    
+    width: 700px;
+    height: 600px;
+    background-color: whitesmoke;
+    border-radius: 30px;
+}
+.FormBox .MuiTextField-root
+{
+    width: 100%;
+    height: 100%;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.Form_Header
+{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3d4977;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    margin-top: 2px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.Form_Header h2
+{
+ font-weight: 500;
+}

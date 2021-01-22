@@ -1,23 +1,47 @@
-import logo from './logo.svg';
-import './App.css';
+
+import React, { useEffect, useState } from "react";
+import "./App.css";
+import FormButton from "./Components/FormButton";
+import Header from "./Components/Header";
+import Sidebar from "./Components/Sidebar";
+import Table from "./Components/Table";
+import axios from './axios'
+import Pusher from "pusher-js";
 
 function App() {
+  const [StudentsDB, setStudentsDB] = useState([])
+  useEffect(() => {
+    axios.get('/')
+    .then(response =>
+      {
+        setStudentsDB(response.data)
+      })
+   
+  }, [StudentsDB])
+  useEffect(() => {
+
+    const pusher = new Pusher('e6ddd738963d174d7848', {
+      cluster: 'ap2'
+    });
+
+    const channel = pusher.subscribe('StudentsDB');
+    channel.bind('inserted', function(data) {
+      setStudentsDB([...StudentsDB,data])
+    });
+    
+    return () => {
+      channel.unbind_all();
+      channel.unsubscribe() 
+    }
+  }, [StudentsDB])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Sidebar />
+      <div className='Body'>
+        <Header />
+        <FormButton />
+        <Table Data={StudentsDB} />
+      </div>
     </div>
   );
 }

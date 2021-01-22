@@ -1,0 +1,7 @@
+.Sidebar {
+    flex: 0.15;
+    background-color: #3d4977;
+    height: 100%;
+    width: 100%;
+    box-shadow: 10px 10px 10px 10px rgba(0,0, 0, 0.3);
+}
