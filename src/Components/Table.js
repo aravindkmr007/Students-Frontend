@@ -3,8 +3,6 @@ import React from "react";
 import "./Table.css";
 
 function Table({Data}) {
-  // const Data = [{ studentid: "1", firstname: "Aravind", lastname: "Kumar" , DOB : '17/11/1995',email : 'aravindkmr007@gmail.com'},
-  // { studentid: "2", firstname: "lAKSHMI", lastname: "Narayanan" , DOB : '22/03/1996',email : 'lnrayan@gmail.com'}];
   const Columns = [
     {
       title: "Student ID",

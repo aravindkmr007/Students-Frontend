@@ -12,6 +12,20 @@
     display: flex;
     align-items: center;
 }
+.Header_left li
+{
+    padding: 10px;
+    list-style: none;
+    color: white;
+    font-weight: 600;
+    margin-left: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.Header_left li:hover
+{
+    background-color: rgba(245,245,245,0.3);
+}
 .Header_right
 {
     display: flex;
